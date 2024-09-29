@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <title>Bug Bounty Hub - Fresh Bug Bounty Programs for Beginners</title>
+    <!-- Google Font Link -->
+
+  
+    <!-- Apply Font via Inline CSS -->
+    <style>
+     body {
+    font-family: 'Roboto Mono', monospace;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fixed Header */
+.fixed {
+    position: fixed;
+    font-size: 1.5em;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: green;
+    color: black;
+    padding: 10px;
+    z-index: 1000;
+}
+
+/* Responsive container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 5%;
+}
+
+header {
+    background-color: #1abc9c;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: white;
+}
+
+header .tagline {
+    font-size: 1.2rem;
+    color: white;
+    margin-top: 10px;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.2;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 2;
+}
+
+.cta-button {
+    background-color: #16a085;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+    position: relative;
+    z-index: 2;
+}
+
+.cta-button:hover {
+    background-color: #149174;
+}
+
+/* Programs Section */
+.programs {
+    background-color: white;
+    padding: 50px 0;
+}
+
+.programs h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.program-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.program {
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    position: relative;
+}
+
+.program:hover {
+    transform: scale(1.05);
+}
+
+.program img.icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.program h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+}
+
+/* Benefits Section */
+.benefits {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+}
+
+.benefits h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.benefit-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.benefit {
+    flex: 1 1 300px;
+    padding: 20px;
+}
+
+.benefit h3 {
+    font-size: 1.5rem;
+    color: #16a085;
+}
+
+footer {
+    background-color: #1abc9c;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+    padding-top: 8%;
+}
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header .tagline {
+        font-size: 1rem;
+    }
+
+    .program-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .benefit-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header .tagline {
+        font-size: 0.8rem;
+    }
+}
+@media screen and (max-width: 460px) {
+    .container {
+    padding-top: 10%;
+}
+}
+@media screen and (max-width: 400px) {
+    .container {
+    padding-top: 35%;
+}
+}
+
+    </style>
+</head>
+
+<body>
+    
+    <nav  class="fixed" style="background-color: #f9f9f9; color: black; padding: 15px;">
+        <a href="blog.html" target="_blank" class="w3-bar-item w3-button">Blog</a> |
+        <a href="contact.html" target="_blank" class="w3-bar-item w3-button">Contact</a>
+    </nav>
+
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1 style="font-family: 'Roboto Mono'" , monospace;>Bug Bounty Hub</h1>
+            <p class="tagline" style="font-family: 'Roboto Mono'">Boost Your Bug Hunting Journey – Find Latest
+                Self-Hosted Programs!</p>
+        </div>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="bg.jpg" alt="Background Image"> <!-- Background image with low opacity -->
+        <div class="container">
+            <h1 style="color: black; font-family: 'Roboto Mono', monospace;">BB | RDP | VDP</h1>
+            <p style="color: black; font-family: 'Roboto Mono', monospace;">Less duplicates and N/A bugs. Start with the
+                newest programs!</p>
+            <a href="#programs" class="cta-button">Find a Program</a>
+        </div>
+    </section>
+
+    <!-- Featured Programs Section -->
+    <section id="programs" class="programs">
+        <div class="container">
+            <h2 style="font-family: 'Roboto Mono'">Top Newly Launched Programs</h2>
+            <div class="program-grid">
+                <!-- Program 1 -->
+                <a href="https://www.neoshare.de/responsible-disclosure-program" target="_blank" style="text-decoration:none;">
+                    <div class="program">
+                        <img src="https://cdn.prod.website-files.com/66c5d9bfaf0993a53a4bbec3/66cc92803d030e659c5eb5eb_favicon_small.png" alt="Program 1 Icon" class="icon">
+                        <h3 style="font-family: 'Roboto Mono'">neoshare AG</h3>
+                        <p>Launch Date: 17 September 2024</p>
+                    </div>
+                </a>
+                <!-- Program 2 -->
+                <a href="https://www.apifonica.com/public/legal/apifonica_responsible_disclosure_policy.pdf" target="_blank" style="text-decoration:none;">
+                    <div class="program">
+                        <img src="https://www.apifonica.com/public/img/favicon/apple-touch-icon.png" alt="Program 2 Icon" class="icon">
+                        <h3 style="font-family: 'Roboto Mono'">Apifonica</h3>
+                        <p>Launch Date: 1 September 2024</p>
+                    </div>
+                </a>
+		<a href="https://www.mylaps.com/wp-content/uploads/2024/07/Responsible-Disclosure-Policy.pdf" target="_blank" style="text-decoration:none;">
+                    <div class="program">
+                        <img src="https://www.mylaps.com/wp-content/themes/mylaps/dist/images/logo-mylaps.svg" alt="Program 2 Icon" class="icon">
+                        <h3 style="font-family: 'Roboto Mono'">MYLAPS</h3>
+                        <p>Launch Date: 11 July 2024</p>
+                    </div>
+                </a>
+		<a href="https://www.debtco.io/legal-uk/disclosure" target="_blank" style="text-decoration:none;">
+                    <div class="program">
+                        <img src="https://cdn.prod.website-files.com/665dd9f1457b93f61917011b/668690c934e31d8196b2b17e_favicon.png" alt="Program 2 Icon" class="icon">
+                        <h3 style="font-family: 'Roboto Mono'">DebtCo</h3>
+                        <p>Launch Date: 13 June 2024</p>
+                    </div>
+                </a>
+		<a href="https://rangde.in/vulnerability-disclosure-program" target="_blank" style="text-decoration:none;">
+                    <div class="program">
+                        <img src="https://rangde.imgix.net/rangde-logo.svg" alt="Program 2 Icon" class="icon">
+                        <h3 style="font-family: 'Roboto Mono'">RangDe</h3>
+                        <p>Launch Date: 10 May 2024</p>
+                    </div>
+                </a>
+		<a href="https://unguess.io/bug-bounty-program/" target="_blank" style="text-decoration:none;">
+                    <div class="program">
+                        <img src="https://unguess.io/wp-content/uploads/2022/12/cropped-favicon-32x32.webp" alt="Program 2 Icon" class="icon">
+                        <h3 style="font-family: 'Roboto Mono'">UNGUESS</h3>
+                        <p>Launch Date: 25 January 2024</p>
+                    </div>
+                </a>
+                <!-- Add more programs as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Benefits Section -->
+    <section class="benefits">
+        <center>
+            <div class="container">
+                <h2 style="font-family: 'Roboto Mono'">Why Choose These Programs?</h2>
+                <div class="benefit-grid">
+                    <div class="benefit">
+                        <h3 style="font-family: 'Roboto Mono'">Less Duplicate Bugs</h3>
+                        <p>Focus on programs that are fresh and haven't been exploited.</p>
+                    </div>
+                    <div class="benefit">
+                        <h3 style="font-family: 'Roboto Mono'">Ideal for Beginners</h3>
+                        <p>Specifically chosen to help new bug bounty hunters gain confidence.</p>
+                    </div>
+                    <div class="benefit">
+                        <h3 style="font-family: 'Roboto Mono'">Constant Updates</h3>
+                        <p>New programs added regularly so you stay ahead of the curve.</p>
+                    </div>
+                </div>
+            </div>
+        </center>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Bug Bounty Hub. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
